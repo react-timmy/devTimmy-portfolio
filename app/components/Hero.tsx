@@ -1,0 +1,392 @@
+"use client";
+
+import { useState, useEffect, useRef } from "react";
+
+const AVATAR = "https://pbs.twimg.com/profile_images/1990929564474773504/HkT4wInV_400x400.jpg";
+
+const ROLES = [
+  "Mobile UI Designer",
+  "Mobile App Builder",
+  "Full-Stack Engineer",
+  "Content Creator",
+];
+
+const PROOF = [
+  { icon: "⬡", text: "FilmSort — offline-first Android app", color: "#a78bfa" },
+  { icon: "◈", text: "Shipped production ready apps",        color: "#a78bfa" },
+  { icon: "▶", text: "Client sites within requested time",   color: "#a78bfa" },
+  { icon: "✦", text: "Writer on X -> @_devTimmy",            color: "#a78bfa" },
+];
+
+const QUICK_STATS = [
+  { value: "3+",  label: "Years",    color: "#a78bfa" },
+  { value: "10+", label: "Projects", color: "#a78bfa" },
+  { value: "5★",  label: "Rated",    color: "#a78bfa" },
+  { value: "24h", label: "Response", color: "#a78bfa" },
+];
+
+const TYPE_SPEED   = 65;
+const DELETE_SPEED = 35;  
+const PAUSE_AFTER  = 1800;
+const PAUSE_BEFORE = 300; 
+
+export default function Hero() {
+  const [displayed, setDisplayed] = useState("");
+  const [roleIdx, setRoleIdx]     = useState(0);
+  const [proofIdx, setProofIdx]   = useState(0);
+  const [proofVis, setProofVis]   = useState(true);
+  const [avatarOpacity, setAvatarOpacity] = useState(1);
+  const avatarRef = useRef<HTMLDivElement>(null);
+  const phaseRef  = useRef<"typing" | "pausing" | "deleting" | "waiting">("typing");
+  const idxRef    = useRef(0);   // char index
+  const roleRef   = useRef(0);   // role index
+
+  /* Typewriter effect */
+  useEffect(() => {
+    let timer: ReturnType<typeof setTimeout>;
+
+    const tick = () => {
+      const role  = ROLES[roleRef.current];
+      const phase = phaseRef.current;
+
+      if (phase === "typing") {
+        idxRef.current += 1;
+        setDisplayed(role.slice(0, idxRef.current));
+        if (idxRef.current >= role.length) {
+          phaseRef.current = "pausing";
+          timer = setTimeout(tick, PAUSE_AFTER);
+        } else {
+          timer = setTimeout(tick, TYPE_SPEED);
+        }
+      } else if (phase === "pausing") {
+        phaseRef.current = "deleting";
+        timer = setTimeout(tick, DELETE_SPEED);
+      } else if (phase === "deleting") {
+        idxRef.current -= 1;
+        setDisplayed(role.slice(0, idxRef.current));
+        if (idxRef.current <= 0) {
+          roleRef.current = (roleRef.current + 1) % ROLES.length;
+          setRoleIdx(roleRef.current);
+          phaseRef.current = "waiting";
+          timer = setTimeout(tick, PAUSE_BEFORE);
+        } else {
+          timer = setTimeout(tick, DELETE_SPEED);
+        }
+      } else {
+        // waiting
+        idxRef.current = 0;
+        phaseRef.current = "typing";
+        timer = setTimeout(tick, TYPE_SPEED);
+      }
+    };
+
+    timer = setTimeout(tick, TYPE_SPEED);
+    return () => clearTimeout(timer);
+  }, []);
+
+  /* Rotate proof */
+  useEffect(() => {
+    const t = setInterval(() => {
+      setProofVis(false);
+      setTimeout(() => { setProofIdx(i => (i + 1) % PROOF.length); setProofVis(true); }, 260);
+    }, 3400);
+    return () => clearInterval(t);
+  }, []);
+
+  /* Publish hero avatar rect so Navbar can pick it up */
+  useEffect(() => {
+    const publish = () => {
+      const el = avatarRef.current;
+      if (!el) return;
+      const r = el.getBoundingClientRect();
+      (window as unknown as Record<string, unknown>).__heroAvatarRect = {
+        cx: r.left + r.width / 2,
+        cy: r.top  + r.height / 2,
+        size: r.width,
+      };
+    };
+    publish();
+    window.addEventListener("resize", publish);
+    return () => window.removeEventListener("resize", publish);
+  }, []);
+
+  /* Fade avatar out as user scrolls — starts fading after 40px, gone by 160px */
+  useEffect(() => {
+    const onScroll = () => {
+      const y = window.scrollY;
+      const opacity = Math.max(0, 1 - (y - 40) / 120);
+      setAvatarOpacity(opacity);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const proof = PROOF[proofIdx];
+
+  return (
+    <section
+      id="hero"
+      style={{
+        position: "relative",
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        overflow: "hidden",
+        background: "#000000",
+      }}
+    >
+      {/* ── Background layers ─────────────────────────────────────────── */}
+      <div aria-hidden style={{
+        position: "absolute", inset: 0,
+        background: "radial-gradient(ellipse 80% 60% at 50% -10%, rgba(99,56,180,0.12) 0%, transparent 70%)",
+      }} />
+      <div aria-hidden style={{
+        position: "absolute", top: 0, left: 0, right: 0, height: 340,
+        background: "radial-gradient(ellipse 55% 45% at 8% -8%, rgba(139,92,246,0.09) 0%, transparent 70%)",
+      }} />
+      <div aria-hidden style={{
+        position: "absolute", inset: 0,
+        background: "linear-gradient(to top, #000000 0%, #000 12%, transparent 55%)",
+      }} />
+      <div aria-hidden style={{
+        position: "absolute", inset: 0,
+        backgroundImage: `
+          linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px)
+        `,
+        backgroundSize: "64px 64px",
+        maskImage: "radial-gradient(ellipse 80% 80% at 50% 0%, black 40%, transparent 100%)",
+      }} />
+
+      {/* ── Content ───────────────────────────────────────────────────── */}
+      <div style={{
+        position: "relative", zIndex: 10,
+        width: "100%", maxWidth: 720,
+        margin: "0 auto",
+        padding: "120px 24px 100px",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        textAlign: "center",
+      }}>
+
+        {/* ── Avatar (source element) ──────────────────────────────────── */}
+        {/* id="hero-avatar-anchor" lets Navbar measure its initial position */}
+        <div
+          id="hero-avatar-anchor"
+          ref={avatarRef}
+          className="anim-fade-up d-1"
+          style={{
+            position: "relative",
+            marginBottom: 24,
+            opacity: avatarOpacity,
+            transform: `scale(${0.85 + 0.15 * avatarOpacity})`,
+            transition: "none", /* driven by scroll, not CSS transition */
+          }}
+        >
+          {/* Spinning conic ring */}
+          <div style={{
+            position: "absolute", inset: -4,
+            borderRadius: "50%",
+            background: "conic-gradient(from 0deg, #8b5cf6 0%, #8b5cf600 40%, #8b5cf600 60%, #8b5cf6 100%)",
+            opacity: 0.45,
+            animation: "heroSpin 8s linear infinite",
+          }} />
+          {/* Photo */}
+          <div style={{
+            position: "relative",
+            width: 100, height: 100,
+            borderRadius: "50%",
+            overflow: "hidden",
+            border: "2px solid rgba(255,255,255,0.1)",
+          }}>
+            <img
+              src={AVATAR}
+              alt="Cole Timmy"
+              style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top center" }}
+            />
+          </div>
+          {/* Heartbeat green dot */}
+          <div style={{
+            position: "absolute", bottom: 3, right: 3,
+            width: 22, height: 22,
+            borderRadius: "50%",
+            background: "#000",
+            display: "flex", alignItems: "center", justifyContent: "center",
+            border: "2.5px solid #000",
+          }}>
+            <div style={{
+              width: 12, height: 12,
+              borderRadius: "50%",
+              background: "#4ade80",
+              boxShadow: "0 0 10px #4ade80bb",
+              animation: "pulse 1.4s ease-in-out infinite",
+            }} />
+          </div>
+        </div>
+
+        {/* ── Handle only (Available pill removed) ────────────────────── */}
+        <div className="anim-fade-up d-1" style={{
+          display: "flex", alignItems: "center", gap: 10,
+          marginBottom: 20, flexWrap: "wrap", justifyContent: "center",
+        }}>
+          <a
+            href="https://x.com/_devTimmy"
+            target="_blank"
+            rel="noreferrer"
+            style={{
+              display: "inline-flex", alignItems: "center", gap: 6,
+              fontSize: 12, fontWeight: 700, color: "#71717a",
+              textDecoration: "none", letterSpacing: 0.2,
+              transition: "color 150ms ease",
+            }}
+            onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.color = "#ffffff"; }}
+            onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.color = "#71717a"; }}
+          >
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+            @_devTimmy
+          </a>
+        </div>
+
+        {/* ── Headline ─────────────────────────────────────────────────── */}
+        <h1 className="anim-fade-up d-2" style={{
+          color: "#ffffff", lineHeight: 1.0,
+          marginBottom: 12,
+          fontSize: "clamp(2.6rem, 8vw, 4.25rem)",
+        }}>
+          I&apos;m Cole Timmy
+        </h1>
+
+        {/* ── Animated role (typewriter) ────────────────────────────────── */}
+        <div className="anim-fade-up d-2" style={{
+          display: "flex", alignItems: "center", justifyContent: "center", gap: 0,
+          marginBottom: 24, height: 36,
+        }}>
+          {/* static "a " prefix */}
+          <span style={{
+            fontSize: "clamp(1.0rem, 3vw, 1.375rem)",
+            fontWeight: 900, letterSpacing: "-0.025em",
+            color: "#ffffff",
+            marginRight: "0.35em",
+          }}>
+            a
+          </span>
+          <span style={{
+            fontSize: "clamp(1.0rem, 3vw, 1.375rem)",
+            fontWeight: 900, letterSpacing: "-0.025em",
+            color: "#8b5cf6",
+            display: "inline-block",
+          }}>
+            {displayed}
+          </span>
+          <span className="cursor-blink" style={{ marginLeft: 2 }} />
+        </div>
+
+
+        {/* ── CTAs ─────────────────────────────────────────────────────── */}
+        <div className="anim-fade-up d-4" style={{
+          display: "flex", gap: 10, flexWrap: "wrap",
+          justifyContent: "center", marginBottom: 40,
+        }}>
+          <a href="#projects" className="btn-primary">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3l14 9-14 9V3z"/></svg>
+            See my work
+          </a>
+          <a href="#contact" className="btn-glass">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Let&apos;s build something
+          </a>
+        </div>
+
+        {/* ── Quick stats ──────────────────────────────────────────────── */}
+        <div className="anim-fade-up d-4" style={{
+          display: "flex", gap: 0,
+          background: "rgba(255,255,255,0.04)",
+          border: "1px solid rgba(255,255,255,0.07)",
+          borderRadius: 14, overflow: "hidden",
+          marginBottom: 36, width: "100%", maxWidth: 440,
+        }}>
+          {QUICK_STATS.map(({ value, label, color }, i) => (
+            <div key={label} style={{
+              flex: 1, display: "flex", flexDirection: "column",
+              alignItems: "center", justifyContent: "center",
+              padding: "14px 8px",
+              borderRight: i < QUICK_STATS.length - 1 ? "1px solid rgba(255,255,255,0.06)" : "none",
+            }}>
+              <span style={{ fontSize: "clamp(1.1rem, 3vw, 1.4rem)", fontWeight: 900, color, letterSpacing: -0.5 }}>{value}</span>
+              <span style={{ fontSize: 9, fontWeight: 800, color: "#3f3f46", letterSpacing: "0.1em", textTransform: "uppercase", marginTop: 3 }}>{label}</span>
+            </div>
+          ))}
+        </div>
+
+        {/* ── Proof ticker ─────────────────────────────────────────────── */}
+        <div className="anim-fade-up d-5" style={{
+          display: "flex", alignItems: "center", gap: 10,
+          marginBottom: 36, height: 28,
+        }}>
+          <span style={{ fontSize: 10, fontWeight: 800, letterSpacing: "0.1em", textTransform: "uppercase", color: "#27272a" }}>
+            Recent
+          </span>
+          <span style={{ width: 1, height: 14, background: "#27272a" }} />
+          <div style={{
+            display: "inline-flex", alignItems: "center", gap: 7,
+            opacity: proofVis ? 1 : 0,
+            transform: proofVis ? "translateY(0)" : "translateY(6px)",
+            transition: "opacity 260ms ease, transform 260ms ease",
+          }}>
+            <span style={{ fontSize: 12, color: proof.color }}>{proof.icon}</span>
+            <span style={{ fontSize: 12, fontWeight: 600, color: "#71717a" }}>{proof.text}</span>
+          </div>
+        </div>
+      </div>
+
+      {/* ── Scroll cue ───────────────────────────────────────────────────── */}
+      <a
+        href="#projects"
+        aria-label="Scroll to projects"
+        style={{
+          position: "absolute", bottom: 36, left: "50%", transform: "translateX(-50%)",
+          display: "flex", flexDirection: "column", alignItems: "center", gap: 7,
+          fontSize: 9, fontWeight: 800, letterSpacing: "0.2em", textTransform: "uppercase",
+          color: "#27272a", textDecoration: "none", transition: "color 150ms ease", zIndex: 10,
+          animation: "scrollFloat 2s ease-in-out infinite",
+        }}
+        onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.color = "#52525b"; }}
+        onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.color = "#27272a"; }}
+      >
+        scroll
+        <div style={{ width: 1, height: 18, background: "linear-gradient(to bottom, #3f3f46, transparent)" }} />
+      </a>
+
+      <style>{`
+        @keyframes heroSpin {
+          from { transform: rotate(0deg); }
+          to   { transform: rotate(360deg); }
+        }
+        @keyframes heartbeat {
+          0%, 100% { transform: scale(1);    opacity: 1;    }
+          14%       { transform: scale(1.35); opacity: 1;    }
+          28%       { transform: scale(1);    opacity: 1;    }
+          42%       { transform: scale(1.2);  opacity: 0.85; }
+          70%       { transform: scale(1);    opacity: 1;    }
+        }
+        @keyframes pulse {
+          0%   { transform: scale(0.85); opacity: 0.5; }
+          50%  { transform: scale(1.12); opacity: 1;   }
+          100% { transform: scale(0.85); opacity: 0.5; }
+        }
+        @keyframes scrollFloat {
+          0%, 100% { transform: translateX(-50%) translateY(0px); }
+          50%       { transform: translateX(-50%) translateY(-8px); }
+        }
+        @media (max-width: 767px) {
+          #hero > div { padding-top: 100px !important; padding-bottom: 80px !important; }
+        }
+      `}</style>
+    </section>
+  );
+}
