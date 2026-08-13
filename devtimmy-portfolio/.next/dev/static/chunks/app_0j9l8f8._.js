@@ -317,7 +317,7 @@ const SOCIAL = [
     },
     {
         label: "Email",
-        handle: "cs...@gmail.com",
+        handle: "cs@gmail.com",
         href: "mailto:colesustain00@gmail.com",
         color: "#8b5cf6"
     }
@@ -1242,9 +1242,9 @@ function Contact() {
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 style: {
                                                     display: "grid",
-                                                    gridTemplateColumns: "repeat(3, 1fr)",
-                                                    gap: 10,
-                                                    paddingTop: 16,
+                                                    gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+                                                    gap: "10px",
+                                                    paddingTop: "16px",
                                                     borderTop: "1px solid rgba(255,255,255,0.06)"
                                                 },
                                                 children: SOCIAL.map(({ label, handle, href, color })=>{
@@ -1263,7 +1263,9 @@ function Contact() {
                                                             border: "1px solid rgba(255,255,255,0.07)",
                                                             borderRadius: 10,
                                                             textDecoration: "none",
-                                                            transition: "border-color 150ms ease, background 150ms ease"
+                                                            transition: "border-color 150ms ease, background 150ms ease",
+                                                            width: "100%",
+                                                            boxSizing: "border-box"
                                                         },
                                                         onMouseEnter: (e)=>{
                                                             const el = e.currentTarget;
@@ -1290,12 +1292,12 @@ function Contact() {
                                                                 },
                                                                 children: Icon && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Icon, {}, void 0, false, {
                                                                     fileName: "[project]/app/components/Contact.tsx",
-                                                                    lineNumber: 333,
+                                                                    lineNumber: 335,
                                                                     columnNumber: 38
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/Contact.tsx",
-                                                                lineNumber: 325,
+                                                                lineNumber: 327,
                                                                 columnNumber: 27
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1315,7 +1317,7 @@ function Contact() {
                                                                         children: label
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/components/Contact.tsx",
-                                                                        lineNumber: 336,
+                                                                        lineNumber: 338,
                                                                         columnNumber: 29
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1330,13 +1332,13 @@ function Contact() {
                                                                         children: handle
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/components/Contact.tsx",
-                                                                        lineNumber: 337,
+                                                                        lineNumber: 339,
                                                                         columnNumber: 29
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/components/Contact.tsx",
-                                                                lineNumber: 335,
+                                                                lineNumber: 337,
                                                                 columnNumber: 27
                                                             }, this)
                                                         ]
@@ -1368,7 +1370,7 @@ function Contact() {
                                                                 children: "$ "
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/Contact.tsx",
-                                                                lineNumber: 347,
+                                                                lineNumber: 349,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1378,13 +1380,13 @@ function Contact() {
                                                                 children: "timmy --availability"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/Contact.tsx",
-                                                                lineNumber: 348,
+                                                                lineNumber: 350,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/components/Contact.tsx",
-                                                        lineNumber: 346,
+                                                        lineNumber: 348,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1402,7 +1404,7 @@ function Contact() {
                                                                 }
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/Contact.tsx",
-                                                                lineNumber: 351,
+                                                                lineNumber: 353,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1413,13 +1415,13 @@ function Contact() {
                                                                 children: "open · response ~24h"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/Contact.tsx",
-                                                                lineNumber: 352,
+                                                                lineNumber: 354,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/components/Contact.tsx",
-                                                        lineNumber: 350,
+                                                        lineNumber: 352,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1430,7 +1432,7 @@ function Contact() {
                                                         children: "timezone: WAT (UTC+1)"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/Contact.tsx",
-                                                        lineNumber: 354,
+                                                        lineNumber: 356,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1441,13 +1443,13 @@ function Contact() {
                                                         children: "best: email or X DMs"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/Contact.tsx",
-                                                        lineNumber: 355,
+                                                        lineNumber: 357,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/components/Contact.tsx",
-                                                lineNumber: 345,
+                                                lineNumber: 347,
                                                 columnNumber: 19
                                             }, this)
                                         ]
@@ -3748,19 +3750,21 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 ;
-var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.signature();
+var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.signature(), _s2 = __turbopack_context__.k.signature();
 "use client";
 ;
 const AVATAR = "https://pbs.twimg.com/profile_images/1990929564474773504/HkT4wInV_400x400.jpg";
 const POSTS = [
-    "https://x.com/_devTimmy/status/2077277282985517261?s=20",
-    "https://x.com/_devTimmy/status/2013150374794874986?s=20",
+    "https://x.com/_devTimmy/status/1951708823850303686?s=20",
+    "https://x.com/_devTimmy/status/1947250782933602507?s=20",
+    "https://x.com/_devTimmy/status/2064580149081788625?s=20",
+    "https://x.com/_devTimmy/status/2060262522616262763?s=20",
+    "https://x.com/_devTimmy/status/2021130066076323986?s=20"
+];
+const ARTICLES = [
     "https://x.com/_devTimmy/status/2011106010354638878?s=20",
-    "https://x.com/_devTimmy/status/1942924726219002217",
-    "https://x.com/_devTimmy/status/1943607903279067284",
-    "https://x.com/_devTimmy/status/1951294263439888803",
-    "https://x.com/_devTimmy/status/1946167486375657855",
-    "https://x.com/_devTimmy/status/2074016480581099917"
+    "https://x.com/_devTimmy/status/2077277282985517261?s=20",
+    "https://x.com/_devTimmy/status/2013150374794874986?s=20"
 ];
 function XLogo({ size = 16 }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
@@ -3772,18 +3776,150 @@ function XLogo({ size = 16 }) {
             d: "M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"
         }, void 0, false, {
             fileName: "[project]/app/components/Web3Community.tsx",
-            lineNumber: 33,
+            lineNumber: 36,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/components/Web3Community.tsx",
-        lineNumber: 32,
+        lineNumber: 35,
         columnNumber: 5
     }, this);
 }
 _c = XLogo;
-function TweetCard({ meta, onHover }) {
+function ArticleCard({ meta }) {
     _s();
+    const [hovered, setHovered] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+        href: meta.url,
+        target: "_blank",
+        rel: "noopener noreferrer",
+        onMouseEnter: ()=>setHovered(true),
+        onMouseLeave: ()=>setHovered(false),
+        style: {
+            position: 'relative',
+            borderRadius: 16,
+            overflow: 'hidden',
+            textDecoration: 'none',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 12,
+            transition: 'transform 150ms ease, box-shadow 150ms ease',
+            transform: hovered ? 'translateY(-4px)' : 'translateY(0)',
+            boxShadow: hovered ? '0 16px 48px rgba(0,0,0,0.7)' : '0 4px 20px rgba(0,0,0,0.5)'
+        },
+        children: meta.image ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            style: {
+                width: '100%',
+                height: 200,
+                borderRadius: 12,
+                overflow: 'hidden',
+                border: `1px solid ${hovered ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.07)'}`,
+                position: 'relative',
+                display: 'block'
+            },
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                    src: meta.image,
+                    alt: meta.title || '',
+                    style: {
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        display: 'block'
+                    }
+                }, void 0, false, {
+                    fileName: "[project]/app/components/Web3Community.tsx",
+                    lineNumber: 80,
+                    columnNumber: 11
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    style: {
+                        position: 'absolute',
+                        inset: 0,
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        padding: '16px',
+                        background: 'linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0.35) 40%, rgba(0,0,0,0.0) 70%)',
+                        backdropFilter: 'blur(4px)',
+                        WebkitBackdropFilter: 'blur(4px)',
+                        boxSizing: 'border-box',
+                        zIndex: 2
+                    },
+                    children: (()=>{
+                        const extractTitleFromDescription = (desc)=>{
+                            if (!desc) return '';
+                            // prefer first non-empty line
+                            const lines = desc.split(/\r?\n/).map((l)=>l.trim()).filter(Boolean);
+                            if (lines.length) {
+                                const first = lines[0];
+                                // if first line is short-ish, use it; otherwise take first sentence
+                                if (first.length <= 120) return first;
+                                const sentence = first.split(/[\.\!\?]\s/)[0];
+                                if (sentence && sentence.length <= 140) return sentence;
+                                return first.slice(0, 140).trim();
+                            }
+                            // fallback: take first 100 chars
+                            return desc.trim().slice(0, 140);
+                        };
+                        const titleText = meta.title && meta.title.trim() ? meta.title.trim() : extractTitleFromDescription(meta.description);
+                        if (!titleText) return null;
+                        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            style: {
+                                color: '#fff',
+                                fontSize: 20,
+                                fontWeight: 800,
+                                textAlign: 'center',
+                                lineHeight: 1.15,
+                                textShadow: '0 8px 28px rgba(0,0,0,0.6)',
+                                overflow: 'hidden',
+                                display: '-webkit-box',
+                                WebkitLineClamp: 3,
+                                WebkitBoxOrient: 'vertical'
+                            },
+                            children: titleText
+                        }, void 0, false, {
+                            fileName: "[project]/app/components/Web3Community.tsx",
+                            lineNumber: 120,
+                            columnNumber: 17
+                        }, this);
+                    })()
+                }, void 0, false, {
+                    fileName: "[project]/app/components/Web3Community.tsx",
+                    lineNumber: 87,
+                    columnNumber: 11
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "[project]/app/components/Web3Community.tsx",
+            lineNumber: 70,
+            columnNumber: 9
+        }, this) : // If no image, fall back to simple title block
+        meta.title && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            style: {
+                padding: 12,
+                background: 'rgba(16,16,20,0.95)',
+                borderRadius: 8,
+                fontSize: 15,
+                fontWeight: 700,
+                color: '#fff'
+            },
+            children: meta.title
+        }, void 0, false, {
+            fileName: "[project]/app/components/Web3Community.tsx",
+            lineNumber: 141,
+            columnNumber: 11
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/app/components/Web3Community.tsx",
+        lineNumber: 47,
+        columnNumber: 5
+    }, this);
+}
+_s(ArticleCard, "V8YbV+gTZxGliGj1g0fftBlvsq4=");
+_c1 = ArticleCard;
+function TweetCard({ meta, onHover }) {
+    _s1();
     const [hovered, setHovered] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [expanded, setExpanded] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const enter = ()=>{
@@ -3794,7 +3930,8 @@ function TweetCard({ meta, onHover }) {
         setHovered(false);
         onHover(false);
     };
-    const text = meta.description || meta.title || '';
+    // Show title + description, or just description, or just title
+    const text = meta.title && meta.description ? `${meta.title}\n\n${meta.description}` : meta.description || meta.title || '';
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
         href: meta.url,
         target: "_blank",
@@ -3836,17 +3973,17 @@ function TweetCard({ meta, onHover }) {
                         d: "M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"
                     }, void 0, false, {
                         fileName: "[project]/app/components/Web3Community.tsx",
-                        lineNumber: 81,
+                        lineNumber: 200,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/components/Web3Community.tsx",
-                    lineNumber: 80,
+                    lineNumber: 199,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/components/Web3Community.tsx",
-                lineNumber: 79,
+                lineNumber: 198,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3877,12 +4014,12 @@ function TweetCard({ meta, onHover }) {
                             }
                         }, void 0, false, {
                             fileName: "[project]/app/components/Web3Community.tsx",
-                            lineNumber: 97,
+                            lineNumber: 216,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/components/Web3Community.tsx",
-                        lineNumber: 88,
+                        lineNumber: 207,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3910,7 +4047,7 @@ function TweetCard({ meta, onHover }) {
                                         children: "TIMM¥"
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/Web3Community.tsx",
-                                        lineNumber: 107,
+                                        lineNumber: 226,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
@@ -3925,18 +4062,18 @@ function TweetCard({ meta, onHover }) {
                                             d: "M22.25 12c0-1.43-.88-2.67-2.19-3.34.46-1.39.2-2.9-.81-3.91s-2.52-1.27-3.91-.81c-.66-1.31-1.91-2.19-3.34-2.19s-2.68.88-3.34 2.19c-1.39-.46-2.9-.2-3.91.81s-1.27 2.52-.81 3.91C2.63 9.33 1.75 10.57 1.75 12s.88 2.67 2.19 3.34c-.46 1.39-.2 2.9.81 3.91s2.52 1.27 3.91.81c.66 1.31 1.91 2.19 3.34 2.19s2.68-.88 3.34-2.19c1.39.46 2.9.2 3.91-.81s1.27-2.52.81-3.91c1.31-.67 2.19-1.91 2.19-3.34zm-11.71 4.2L6.8 12.46l1.41-1.42 2.26 2.26 4.8-5.23 1.47 1.36-6.2 6.77z"
                                         }, void 0, false, {
                                             fileName: "[project]/app/components/Web3Community.tsx",
-                                            lineNumber: 118,
+                                            lineNumber: 237,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/Web3Community.tsx",
-                                        lineNumber: 117,
+                                        lineNumber: 236,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/components/Web3Community.tsx",
-                                lineNumber: 106,
+                                lineNumber: 225,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3956,7 +4093,7 @@ function TweetCard({ meta, onHover }) {
                                         children: "@_devTimmy"
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/Web3Community.tsx",
-                                        lineNumber: 122,
+                                        lineNumber: 241,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3967,7 +4104,7 @@ function TweetCard({ meta, onHover }) {
                                         children: "·"
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/Web3Community.tsx",
-                                        lineNumber: 123,
+                                        lineNumber: 242,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3986,25 +4123,25 @@ function TweetCard({ meta, onHover }) {
                                         children: "Follow"
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/Web3Community.tsx",
-                                        lineNumber: 124,
+                                        lineNumber: 243,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/components/Web3Community.tsx",
-                                lineNumber: 121,
+                                lineNumber: 240,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/components/Web3Community.tsx",
-                        lineNumber: 105,
+                        lineNumber: 224,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/components/Web3Community.tsx",
-                lineNumber: 86,
+                lineNumber: 205,
                 columnNumber: 7
             }, this),
             text ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4015,16 +4152,21 @@ function TweetCard({ meta, onHover }) {
                 },
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        style: expanded ? {} : {
+                        style: expanded ? {
+                            whiteSpace: 'pre-wrap',
+                            wordBreak: 'break-word'
+                        } : {
                             display: '-webkit-box',
                             WebkitLineClamp: 6,
                             WebkitBoxOrient: 'vertical',
-                            overflow: 'hidden'
+                            overflow: 'hidden',
+                            whiteSpace: 'pre-wrap',
+                            wordBreak: 'break-word'
                         },
                         children: text
                     }, void 0, false, {
                         fileName: "[project]/app/components/Web3Community.tsx",
-                        lineNumber: 143,
+                        lineNumber: 262,
                         columnNumber: 11
                     }, this),
                     text.length > 240 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -4046,13 +4188,13 @@ function TweetCard({ meta, onHover }) {
                         children: expanded ? 'Show less' : 'Show more'
                     }, void 0, false, {
                         fileName: "[project]/app/components/Web3Community.tsx",
-                        lineNumber: 151,
+                        lineNumber: 270,
                         columnNumber: 13
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/components/Web3Community.tsx",
-                lineNumber: 142,
+                lineNumber: 261,
                 columnNumber: 9
             }, this) : null,
             meta.image ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4061,209 +4203,56 @@ function TweetCard({ meta, onHover }) {
                     borderRadius: 12,
                     overflow: 'hidden',
                     border: '1px solid rgba(255,255,255,0.07)',
-                    flexShrink: 0
-                },
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                    src: meta.image,
-                    alt: meta.title || '',
-                    style: {
-                        width: '100%',
-                        height: 168,
-                        objectFit: 'cover',
-                        display: 'block'
-                    }
-                }, void 0, false, {
-                    fileName: "[project]/app/components/Web3Community.tsx",
-                    lineNumber: 180,
-                    columnNumber: 11
-                }, this)
-            }, void 0, false, {
-                fileName: "[project]/app/components/Web3Community.tsx",
-                lineNumber: 172,
-                columnNumber: 9
-            }, this) : null,
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                style: {
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: 16,
-                    marginTop: 2,
-                    color: '#71717a',
-                    fontSize: 13
+                    flexShrink: 0,
+                    position: 'relative'
                 },
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                        src: meta.image,
+                        alt: meta.title || '',
                         style: {
-                            display: 'inline-flex',
-                            alignItems: 'center',
-                            gap: 5
-                        },
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                            width: "15",
-                            height: "15",
-                            viewBox: "0 0 24 24",
-                            fill: "none",
-                            stroke: "currentColor",
-                            strokeWidth: "1.7",
-                            strokeLinecap: "round",
-                            strokeLinejoin: "round",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                d: "M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
-                            }, void 0, false, {
-                                fileName: "[project]/app/components/Web3Community.tsx",
-                                lineNumber: 200,
-                                columnNumber: 13
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "[project]/app/components/Web3Community.tsx",
-                            lineNumber: 199,
-                            columnNumber: 11
-                        }, this)
+                            width: '100%',
+                            height: 168,
+                            objectFit: 'cover',
+                            display: 'block'
+                        }
                     }, void 0, false, {
                         fileName: "[project]/app/components/Web3Community.tsx",
-                        lineNumber: 198,
-                        columnNumber: 9
+                        lineNumber: 300,
+                        columnNumber: 11
                     }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         style: {
-                            display: 'inline-flex',
-                            alignItems: 'center',
-                            gap: 5
-                        },
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                            width: "15",
-                            height: "15",
-                            viewBox: "0 0 24 24",
-                            fill: "none",
-                            stroke: "currentColor",
-                            strokeWidth: "1.7",
-                            strokeLinecap: "round",
-                            strokeLinejoin: "round",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("polyline", {
-                                    points: "17 1 21 5 17 9"
-                                }, void 0, false, {
-                                    fileName: "[project]/app/components/Web3Community.tsx",
-                                    lineNumber: 206,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                    d: "M3 11V9a4 4 0 0 1 4-4h14"
-                                }, void 0, false, {
-                                    fileName: "[project]/app/components/Web3Community.tsx",
-                                    lineNumber: 206,
-                                    columnNumber: 48
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("polyline", {
-                                    points: "7 23 3 19 7 15"
-                                }, void 0, false, {
-                                    fileName: "[project]/app/components/Web3Community.tsx",
-                                    lineNumber: 206,
-                                    columnNumber: 84
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                    d: "M21 13v2a4 4 0 0 1-4 4H3"
-                                }, void 0, false, {
-                                    fileName: "[project]/app/components/Web3Community.tsx",
-                                    lineNumber: 206,
-                                    columnNumber: 119
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/app/components/Web3Community.tsx",
-                            lineNumber: 205,
-                            columnNumber: 11
-                        }, this)
+                            position: 'absolute',
+                            bottom: 0,
+                            left: 0,
+                            right: 0,
+                            height: '60%',
+                            background: 'linear-gradient(to bottom, transparent, rgba(16, 16, 20, 0.95))',
+                            pointerEvents: 'none'
+                        }
                     }, void 0, false, {
                         fileName: "[project]/app/components/Web3Community.tsx",
-                        lineNumber: 204,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        style: {
-                            display: 'inline-flex',
-                            alignItems: 'center',
-                            gap: 5
-                        },
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                width: "15",
-                                height: "15",
-                                viewBox: "0 0 24 24",
-                                fill: "none",
-                                stroke: "currentColor",
-                                strokeWidth: "1.7",
-                                strokeLinecap: "round",
-                                strokeLinejoin: "round",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                    d: "M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
-                                }, void 0, false, {
-                                    fileName: "[project]/app/components/Web3Community.tsx",
-                                    lineNumber: 212,
-                                    columnNumber: 13
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "[project]/app/components/Web3Community.tsx",
-                                lineNumber: 211,
-                                columnNumber: 11
-                            }, this),
-                            meta.likes ? meta.likes : ''
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/app/components/Web3Community.tsx",
-                        lineNumber: 210,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        style: {
-                            marginLeft: 'auto',
-                            display: 'inline-flex',
-                            alignItems: 'center',
-                            gap: 5
-                        },
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                            width: "15",
-                            height: "15",
-                            viewBox: "0 0 24 24",
-                            fill: "none",
-                            stroke: "currentColor",
-                            strokeWidth: "1.7",
-                            strokeLinecap: "round",
-                            strokeLinejoin: "round",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                d: "M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"
-                            }, void 0, false, {
-                                fileName: "[project]/app/components/Web3Community.tsx",
-                                lineNumber: 219,
-                                columnNumber: 13
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "[project]/app/components/Web3Community.tsx",
-                            lineNumber: 218,
-                            columnNumber: 11
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/app/components/Web3Community.tsx",
-                        lineNumber: 217,
-                        columnNumber: 9
+                        lineNumber: 306,
+                        columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/components/Web3Community.tsx",
-                lineNumber: 189,
-                columnNumber: 7
-            }, this)
+                lineNumber: 291,
+                columnNumber: 9
+            }, this) : null
         ]
     }, void 0, true, {
         fileName: "[project]/app/components/Web3Community.tsx",
-        lineNumber: 49,
+        lineNumber: 168,
         columnNumber: 5
     }, this);
 }
-_s(TweetCard, "+ZHtaAa87ETbB1e9tnVN8mLCNdw=");
-_c1 = TweetCard;
+_s1(TweetCard, "+ZHtaAa87ETbB1e9tnVN8mLCNdw=");
+_c2 = TweetCard;
 function Web3Community() {
-    _s1();
+    _s2();
     const [posts, setPosts] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({
         "Web3Community.useState": ()=>POSTS.map({
                 "Web3Community.useState": (u, i)=>({
@@ -4273,10 +4262,12 @@ function Web3Community() {
             }["Web3Community.useState"])
     }["Web3Community.useState"]);
     const [paused, setPaused] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [activeTab, setActiveTab] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])('posts');
     const [metaList, setMetaList] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [articlesList, setArticlesList] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "Web3Community.useEffect": ()=>{
-            // Fetch scraped metadata for provided post URLs
+            // Fetch scraped metadata for posts
             let cancelled = false;
             ({
                 "Web3Community.useEffect": async ()=>{
@@ -4332,6 +4323,64 @@ function Web3Community() {
             })["Web3Community.useEffect"];
         }
     }["Web3Community.useEffect"], []);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "Web3Community.useEffect": ()=>{
+            // Fetch scraped metadata for articles
+            let cancelled = false;
+            ({
+                "Web3Community.useEffect": async ()=>{
+                    try {
+                        const res = await fetch('/api/fetch-meta', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                urls: ARTICLES
+                            })
+                        });
+                        const data = await res.json();
+                        if (cancelled) return;
+                        if (data?.ok && Array.isArray(data.results)) {
+                            setArticlesList(data.results.map({
+                                "Web3Community.useEffect": (r)=>({
+                                        url: r.url,
+                                        title: r.title || '',
+                                        description: r.description || '',
+                                        image: r.image || '',
+                                        likes: r.likes || 0
+                                    })
+                            }["Web3Community.useEffect"]));
+                        } else {
+                            setArticlesList(ARTICLES.map({
+                                "Web3Community.useEffect": (u)=>({
+                                        url: u,
+                                        title: '',
+                                        description: '',
+                                        image: '',
+                                        likes: 0
+                                    })
+                            }["Web3Community.useEffect"]));
+                        }
+                    } catch (err) {
+                        setArticlesList(ARTICLES.map({
+                            "Web3Community.useEffect": (u)=>({
+                                    url: u,
+                                    title: '',
+                                    description: '',
+                                    image: ''
+                                })
+                        }["Web3Community.useEffect"]));
+                    }
+                }
+            })["Web3Community.useEffect"]();
+            return ({
+                "Web3Community.useEffect": ()=>{
+                    cancelled = true;
+                }
+            })["Web3Community.useEffect"];
+        }
+    }["Web3Community.useEffect"], []);
     const handleCardHover = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCallback"])({
         "Web3Community.useCallback[handleCardHover]": (h)=>setPaused(h)
     }["Web3Community.useCallback[handleCardHover]"], []);
@@ -4369,7 +4418,7 @@ function Web3Community() {
                 }
             }, void 0, false, {
                 fileName: "[project]/app/components/Web3Community.tsx",
-                lineNumber: 274,
+                lineNumber: 394,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4378,126 +4427,351 @@ function Web3Community() {
                     margin: "0 auto",
                     padding: "0 24px"
                 },
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    style: {
-                        display: "flex",
-                        alignItems: "flex-end",
-                        justifyContent: "space-between",
-                        flexWrap: "wrap",
-                        gap: 20,
-                        marginBottom: 40
-                    },
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        style: {
+                            display: "flex",
+                            alignItems: "flex-end",
+                            justifyContent: "space-between",
+                            flexWrap: "wrap",
+                            gap: 20,
+                            marginBottom: 40
+                        },
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                        style: {
+                                            color: "#ffffff",
+                                            fontSize: "clamp(1.75rem, 4vw, 2.75rem)",
+                                            fontWeight: 900,
+                                            letterSpacing: "-0.03em",
+                                            lineHeight: 1.1,
+                                            marginBottom: 10
+                                        },
+                                        children: "What I'm Into"
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/components/Web3Community.tsx",
+                                        lineNumber: 410,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        style: {
+                                            color: "#71717a",
+                                            fontSize: 15,
+                                            margin: 0,
+                                            maxWidth: 420
+                                        },
+                                        children: "Building user solutions, exploring AI and crypto, making ideas come alive and sharing what I learn"
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/components/Web3Community.tsx",
+                                        lineNumber: 418,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/app/components/Web3Community.tsx",
+                                lineNumber: 409,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                href: "https://x.com/_devTimmy",
+                                target: "_blank",
+                                rel: "noopener noreferrer",
+                                style: {
+                                    display: "inline-flex",
+                                    alignItems: "center",
+                                    gap: 7,
+                                    padding: "9px 18px",
+                                    borderRadius: 9999,
+                                    background: "rgba(255,255,255,0.06)",
+                                    border: "1px solid rgba(255,255,255,0.1)",
+                                    color: "#a1a1aa",
+                                    fontSize: 13,
+                                    fontWeight: 700,
+                                    textDecoration: "none",
+                                    transition: "background 150ms ease, color 150ms ease, border-color 150ms ease"
+                                },
+                                onMouseEnter: (e)=>{
+                                    const el = e.currentTarget;
+                                    el.style.background = "rgba(255,255,255,0.1)";
+                                    el.style.color = "#fff";
+                                    el.style.borderColor = "rgba(255,255,255,0.18)";
+                                },
+                                onMouseLeave: (e)=>{
+                                    const el = e.currentTarget;
+                                    el.style.background = "rgba(255,255,255,0.06)";
+                                    el.style.color = "#a1a1aa";
+                                    el.style.borderColor = "rgba(255,255,255,0.1)";
+                                },
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(XLogo, {
+                                        size: 14
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/components/Web3Community.tsx",
+                                        lineNumber: 449,
+                                        columnNumber: 13
+                                    }, this),
+                                    "Follow @_devTimmy"
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/app/components/Web3Community.tsx",
+                                lineNumber: 423,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/app/components/Web3Community.tsx",
+                        lineNumber: 404,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        style: {
+                            display: "flex",
+                            gap: 16,
+                            marginBottom: 32,
+                            borderBottom: "1px solid rgba(255,255,255,0.1)",
+                            paddingBottom: 16
+                        },
+                        children: [
+                            'posts',
+                            'articles'
+                        ].map((tab)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                onClick: ()=>setActiveTab(tab),
+                                style: {
+                                    background: 'none',
+                                    border: 'none',
+                                    padding: '8px 16px',
+                                    fontSize: 14,
+                                    fontWeight: 600,
+                                    color: activeTab === tab ? '#ffffff' : '#71717a',
+                                    cursor: 'pointer',
+                                    transition: 'color 150ms ease',
+                                    borderBottom: activeTab === tab ? '2px solid #8b5cf6' : 'none',
+                                    marginBottom: -16,
+                                    paddingBottom: 16
+                                },
+                                onMouseEnter: (e)=>{
+                                    if (activeTab !== tab) {
+                                        e.currentTarget.style.color = '#a1a1aa';
+                                    }
+                                },
+                                onMouseLeave: (e)=>{
+                                    if (activeTab !== tab) {
+                                        e.currentTarget.style.color = '#71717a';
+                                    }
+                                },
+                                children: tab === 'posts' ? 'What I Share' : 'Articles'
+                            }, tab, false, {
+                                fileName: "[project]/app/components/Web3Community.tsx",
+                                lineNumber: 463,
+                                columnNumber: 13
+                            }, this))
+                    }, void 0, false, {
+                        fileName: "[project]/app/components/Web3Community.tsx",
+                        lineNumber: 455,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/app/components/Web3Community.tsx",
+                lineNumber: 401,
+                columnNumber: 7
+            }, this),
+            activeTab === 'posts' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "tweets-marquee-outer",
+                        "aria-label": "X posts auto-scroll",
+                        style: {
+                            paddingLeft: 24
+                        },
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "tweets-marquee-track",
+                            style: {
+                                animationPlayState: paused ? "paused" : "running"
+                            },
+                            children: metaList === null ? // Show skeletons while loading
+                            Array.from({
+                                length: POSTS.length * 2
+                            }).map((_, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     style: {
-                                        color: "#ffffff",
-                                        fontSize: "clamp(1.75rem, 4vw, 2.75rem)",
-                                        fontWeight: 900,
-                                        letterSpacing: "-0.03em",
-                                        lineHeight: 1.1,
-                                        marginBottom: 10
+                                        width: 320,
+                                        flexShrink: 0,
+                                        borderRadius: 12,
+                                        padding: 12
                                     },
-                                    children: "What I'm Into"
-                                }, void 0, false, {
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            style: {
+                                                width: '100%',
+                                                height: 160,
+                                                borderRadius: 8,
+                                                background: 'linear-gradient(90deg, #0d0d0d, #151515, #0d0d0d)',
+                                                backgroundSize: '200% 100%',
+                                                animation: 'shimmer 1.2s linear infinite'
+                                            }
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/components/Web3Community.tsx",
+                                            lineNumber: 514,
+                                            columnNumber: 21
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            style: {
+                                                height: 12
+                                            }
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/components/Web3Community.tsx",
+                                            lineNumber: 515,
+                                            columnNumber: 21
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            style: {
+                                                width: '70%',
+                                                height: 12,
+                                                borderRadius: 6,
+                                                background: 'linear-gradient(90deg, #0d0d0d, #151515, #0d0d0d)',
+                                                backgroundSize: '200% 100%',
+                                                animation: 'shimmer 1.2s linear infinite'
+                                            }
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/components/Web3Community.tsx",
+                                            lineNumber: 516,
+                                            columnNumber: 21
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            style: {
+                                                height: 8
+                                            }
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/components/Web3Community.tsx",
+                                            lineNumber: 517,
+                                            columnNumber: 21
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            style: {
+                                                width: '100%',
+                                                height: 44,
+                                                borderRadius: 6,
+                                                background: 'linear-gradient(90deg, #0d0d0d, #151515, #0d0d0d)',
+                                                backgroundSize: '200% 100%',
+                                                animation: 'shimmer 1.2s linear infinite'
+                                            }
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/components/Web3Community.tsx",
+                                            lineNumber: 518,
+                                            columnNumber: 21
+                                        }, this)
+                                    ]
+                                }, `s-${i}`, true, {
                                     fileName: "[project]/app/components/Web3Community.tsx",
-                                    lineNumber: 290,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    style: {
-                                        color: "#71717a",
-                                        fontSize: 15,
-                                        margin: 0,
-                                        maxWidth: 420
-                                    },
-                                    children: "Building user solutions, exploring AI and crypto, making ideas come alive and sharing what I learn"
-                                }, void 0, false, {
+                                    lineNumber: 513,
+                                    columnNumber: 19
+                                }, this)) : looped.map((meta, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(TweetCard, {
+                                    meta: meta,
+                                    onHover: handleCardHover
+                                }, `${meta.url}-${i}`, false, {
                                     fileName: "[project]/app/components/Web3Community.tsx",
-                                    lineNumber: 298,
-                                    columnNumber: 13
-                                }, this)
-                            ]
-                        }, void 0, true, {
+                                    lineNumber: 523,
+                                    columnNumber: 19
+                                }, this))
+                        }, void 0, false, {
                             fileName: "[project]/app/components/Web3Community.tsx",
-                            lineNumber: 289,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                            lineNumber: 504,
+                            columnNumber: 13
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/app/components/Web3Community.tsx",
+                        lineNumber: 499,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        style: {
+                            maxWidth: 1200,
+                            margin: "32px auto 0",
+                            padding: "0 24px"
+                        },
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                             href: "https://x.com/_devTimmy",
                             target: "_blank",
                             rel: "noopener noreferrer",
                             style: {
                                 display: "inline-flex",
                                 alignItems: "center",
-                                gap: 7,
-                                padding: "9px 18px",
-                                borderRadius: 9999,
-                                background: "rgba(255,255,255,0.06)",
-                                border: "1px solid rgba(255,255,255,0.1)",
-                                color: "#a1a1aa",
+                                gap: 6,
                                 fontSize: 13,
                                 fontWeight: 700,
+                                color: "#8b5cf6",
                                 textDecoration: "none",
-                                transition: "background 150ms ease, color 150ms ease, border-color 150ms ease"
+                                transition: "color 150ms ease"
                             },
                             onMouseEnter: (e)=>{
-                                const el = e.currentTarget;
-                                el.style.background = "rgba(255,255,255,0.1)";
-                                el.style.color = "#fff";
-                                el.style.borderColor = "rgba(255,255,255,0.18)";
+                                e.currentTarget.style.color = "#a78bfa";
                             },
                             onMouseLeave: (e)=>{
-                                const el = e.currentTarget;
-                                el.style.background = "rgba(255,255,255,0.06)";
-                                el.style.color = "#a1a1aa";
-                                el.style.borderColor = "rgba(255,255,255,0.1)";
+                                e.currentTarget.style.color = "#8b5cf6";
                             },
                             children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(XLogo, {
-                                    size: 14
+                                "See all posts on X",
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                    width: "12",
+                                    height: "12",
+                                    viewBox: "0 0 24 24",
+                                    fill: "none",
+                                    stroke: "currentColor",
+                                    strokeWidth: "2.5",
+                                    strokeLinecap: "round",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("polyline", {
+                                        points: "9 18 15 12 9 6"
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/components/Web3Community.tsx",
+                                        lineNumber: 549,
+                                        columnNumber: 137
+                                    }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/Web3Community.tsx",
-                                    lineNumber: 329,
-                                    columnNumber: 13
-                                }, this),
-                                "Follow @_devTimmy"
+                                    lineNumber: 549,
+                                    columnNumber: 15
+                                }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/components/Web3Community.tsx",
-                            lineNumber: 303,
-                            columnNumber: 11
+                            lineNumber: 535,
+                            columnNumber: 13
                         }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/app/components/Web3Community.tsx",
-                    lineNumber: 284,
-                    columnNumber: 9
-                }, this)
-            }, void 0, false, {
+                    }, void 0, false, {
+                        fileName: "[project]/app/components/Web3Community.tsx",
+                        lineNumber: 534,
+                        columnNumber: 11
+                    }, this)
+                ]
+            }, void 0, true, {
                 fileName: "[project]/app/components/Web3Community.tsx",
-                lineNumber: 281,
-                columnNumber: 7
+                lineNumber: 498,
+                columnNumber: 9
             }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "tweets-marquee-outer",
-                "aria-label": "X posts auto-scroll",
+            activeTab === 'articles' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 style: {
-                    paddingLeft: 24
+                    maxWidth: 1200,
+                    margin: "0 auto",
+                    padding: "0 24px"
                 },
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "tweets-marquee-track",
                     style: {
-                        animationPlayState: paused ? "paused" : "running"
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+                        gap: 20
                     },
-                    children: metaList === null ? // Show skeletons while loading
-                    Array.from({
-                        length: POSTS.length * 2
+                    children: articlesList ? articlesList.map((meta, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(ArticleCard, {
+                            meta: meta
+                        }, `article-${meta.url}-${i}`, false, {
+                            fileName: "[project]/app/components/Web3Community.tsx",
+                            lineNumber: 564,
+                            columnNumber: 15
+                        }, this)) : Array.from({
+                        length: 3
                     }).map((_, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             style: {
-                                width: 320,
-                                flexShrink: 0,
                                 borderRadius: 12,
                                 padding: 12
                             },
@@ -4505,7 +4779,7 @@ function Web3Community() {
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     style: {
                                         width: '100%',
-                                        height: 160,
+                                        height: 200,
                                         borderRadius: 8,
                                         background: 'linear-gradient(90deg, #0d0d0d, #151515, #0d0d0d)',
                                         backgroundSize: '200% 100%',
@@ -4513,8 +4787,8 @@ function Web3Community() {
                                     }
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/Web3Community.tsx",
-                                    lineNumber: 352,
-                                    columnNumber: 17
+                                    lineNumber: 571,
+                                    columnNumber: 19
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     style: {
@@ -4522,36 +4796,13 @@ function Web3Community() {
                                     }
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/Web3Community.tsx",
-                                    lineNumber: 353,
-                                    columnNumber: 17
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    style: {
-                                        width: '70%',
-                                        height: 12,
-                                        borderRadius: 6,
-                                        background: 'linear-gradient(90deg, #0d0d0d, #151515, #0d0d0d)',
-                                        backgroundSize: '200% 100%',
-                                        animation: 'shimmer 1.2s linear infinite'
-                                    }
-                                }, void 0, false, {
-                                    fileName: "[project]/app/components/Web3Community.tsx",
-                                    lineNumber: 354,
-                                    columnNumber: 17
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    style: {
-                                        height: 8
-                                    }
-                                }, void 0, false, {
-                                    fileName: "[project]/app/components/Web3Community.tsx",
-                                    lineNumber: 355,
-                                    columnNumber: 17
+                                    lineNumber: 572,
+                                    columnNumber: 19
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     style: {
                                         width: '100%',
-                                        height: 44,
+                                        height: 80,
                                         borderRadius: 6,
                                         background: 'linear-gradient(90deg, #0d0d0d, #151515, #0d0d0d)',
                                         backgroundSize: '200% 100%',
@@ -4559,90 +4810,24 @@ function Web3Community() {
                                     }
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/Web3Community.tsx",
-                                    lineNumber: 356,
-                                    columnNumber: 17
+                                    lineNumber: 573,
+                                    columnNumber: 19
                                 }, this)
                             ]
-                        }, `s-${i}`, true, {
+                        }, `article-skeleton-${i}`, true, {
                             fileName: "[project]/app/components/Web3Community.tsx",
-                            lineNumber: 351,
-                            columnNumber: 15
-                        }, this)) : looped.map((meta, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(TweetCard, {
-                            meta: meta,
-                            onHover: handleCardHover
-                        }, `${meta.url}-${i}`, false, {
-                            fileName: "[project]/app/components/Web3Community.tsx",
-                            lineNumber: 361,
-                            columnNumber: 15
+                            lineNumber: 570,
+                            columnNumber: 17
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/app/components/Web3Community.tsx",
-                    lineNumber: 342,
-                    columnNumber: 9
+                    lineNumber: 558,
+                    columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/components/Web3Community.tsx",
-                lineNumber: 337,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                style: {
-                    maxWidth: 1200,
-                    margin: "32px auto 0",
-                    padding: "0 24px"
-                },
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                    href: "https://x.com/_devTimmy",
-                    target: "_blank",
-                    rel: "noopener noreferrer",
-                    style: {
-                        display: "inline-flex",
-                        alignItems: "center",
-                        gap: 6,
-                        fontSize: 13,
-                        fontWeight: 700,
-                        color: "#8b5cf6",
-                        textDecoration: "none",
-                        transition: "color 150ms ease"
-                    },
-                    onMouseEnter: (e)=>{
-                        e.currentTarget.style.color = "#a78bfa";
-                    },
-                    onMouseLeave: (e)=>{
-                        e.currentTarget.style.color = "#8b5cf6";
-                    },
-                    children: [
-                        "See all posts on X",
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                            width: "12",
-                            height: "12",
-                            viewBox: "0 0 24 24",
-                            fill: "none",
-                            stroke: "currentColor",
-                            strokeWidth: "2.5",
-                            strokeLinecap: "round",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("polyline", {
-                                points: "9 18 15 12 9 6"
-                            }, void 0, false, {
-                                fileName: "[project]/app/components/Web3Community.tsx",
-                                lineNumber: 387,
-                                columnNumber: 133
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "[project]/app/components/Web3Community.tsx",
-                            lineNumber: 387,
-                            columnNumber: 11
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/app/components/Web3Community.tsx",
-                    lineNumber: 373,
-                    columnNumber: 9
-                }, this)
-            }, void 0, false, {
-                fileName: "[project]/app/components/Web3Community.tsx",
-                lineNumber: 372,
-                columnNumber: 7
+                lineNumber: 557,
+                columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("style", {
                 children: `
@@ -4688,22 +4873,23 @@ function Web3Community() {
       `
             }, void 0, false, {
                 fileName: "[project]/app/components/Web3Community.tsx",
-                lineNumber: 391,
+                lineNumber: 581,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/components/Web3Community.tsx",
-        lineNumber: 263,
+        lineNumber: 383,
         columnNumber: 5
     }, this);
 }
-_s1(Web3Community, "k7srh8jeoIW3EZST/wRw49frIe0=");
-_c2 = Web3Community;
-var _c, _c1, _c2;
+_s2(Web3Community, "B1wm8M7+bgJAHcxEwpcgczBOfQg=");
+_c3 = Web3Community;
+var _c, _c1, _c2, _c3;
 __turbopack_context__.k.register(_c, "XLogo");
-__turbopack_context__.k.register(_c1, "TweetCard");
-__turbopack_context__.k.register(_c2, "Web3Community");
+__turbopack_context__.k.register(_c1, "ArticleCard");
+__turbopack_context__.k.register(_c2, "TweetCard");
+__turbopack_context__.k.register(_c3, "Web3Community");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
@@ -4787,7 +4973,7 @@ const projects = [
         title: "Buildoors",
         subtitle: "Full-stack web project for builders",
         summary: "Full-stack platform for tracking projects and connecting with builders. React, Node.js, deployed on Railway.",
-        category: "projects hub",
+        category: "web",
         status: "published",
         featured: true,
         priority: 3,

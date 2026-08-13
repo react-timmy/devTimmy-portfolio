@@ -12,7 +12,7 @@ module.exports = {
         'fs-deep':        '#0b0b0b',
         'fs-card':        'rgba(255,255,255,0.04)',
         'fs-border':      'rgba(255,255,255,0.07)',
-mine         'fs-red':         '#8b5cf6',
+'fs-red':         '#8b5cf6',
         'fs-purple':      '#8b5cf6',
         'fs-green':       '#4ade80',
         'fs-amber':       '#f59e0b',

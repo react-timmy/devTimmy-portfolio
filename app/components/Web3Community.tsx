@@ -15,12 +15,16 @@ type Tweet = {
 
 const POSTS = [
   "https://x.com/_devTimmy/status/1951708823850303686?s=20",
-  "https://x.com/_devTimmy/status/1949135467951120753?s=20",
   "https://x.com/_devTimmy/status/1947250782933602507?s=20",
   "https://x.com/_devTimmy/status/2064580149081788625?s=20",
-  "https://x.com/_devTimmy/status/2059912628101681607?s=20",
   "https://x.com/_devTimmy/status/2060262522616262763?s=20",
   "https://x.com/_devTimmy/status/2021130066076323986?s=20",
+];
+
+const ARTICLES = [
+  "https://x.com/_devTimmy/status/2011106010354638878?s=20",
+  "https://x.com/_devTimmy/status/2077277282985517261?s=20",
+  "https://x.com/_devTimmy/status/2013150374794874986?s=20",
 ];
 
 type Post = { id: string; url: string };
@@ -36,13 +40,129 @@ function XLogo({ size = 16 }: { size?: number }) {
 
 type Meta = { url: string; title: string; description: string; image: string; likes?: number };
 
+function ArticleCard({ meta }: { meta: Meta }) {
+  const [hovered, setHovered] = useState(false);
+
+  return (
+    <a
+      href={meta.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={{
+        position: 'relative',
+        borderRadius: 16,
+        overflow: 'hidden',
+        textDecoration: 'none',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: 12,
+        transition: 'transform 150ms ease, box-shadow 150ms ease',
+        transform: hovered ? 'translateY(-4px)' : 'translateY(0)',
+        boxShadow: hovered
+          ? '0 16px 48px rgba(0,0,0,0.7)'
+          : '0 4px 20px rgba(0,0,0,0.5)',
+      }}
+    >
+      {/* Image with title overlay */}
+      {meta.image ? (
+        <div style={{
+          width: '100%',
+          height: 200,
+          borderRadius: 12,
+          overflow: 'hidden',
+          border: `1px solid ${hovered ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.07)'}`,
+          position: 'relative',
+          display: 'block',
+        }}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={meta.image}
+            alt={meta.title || ''}
+            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+          />
+
+          {/* Centered title overlay */}
+          <div style={{
+            position: 'absolute',
+            inset: 0,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '16px',
+            background: 'linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0.35) 40%, rgba(0,0,0,0.0) 70%)',
+            backdropFilter: 'blur(4px)',
+            WebkitBackdropFilter: 'blur(4px)',
+            boxSizing: 'border-box',
+            zIndex: 2,
+          }}>
+            {(() => {
+              const extractTitleFromDescription = (desc?: string) => {
+                if (!desc) return '';
+                // prefer first non-empty line
+                const lines = desc.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
+                if (lines.length) {
+                  const first = lines[0];
+                  // if first line is short-ish, use it; otherwise take first sentence
+                  if (first.length <= 120) return first;
+                  const sentence = first.split(/[\.\!\?]\s/)[0];
+                  if (sentence && sentence.length <= 140) return sentence;
+                  return first.slice(0, 140).trim();
+                }
+                // fallback: take first 100 chars
+                return desc.trim().slice(0, 140);
+              };
+
+              const titleText = (meta.title && meta.title.trim()) ? meta.title.trim() : extractTitleFromDescription(meta.description);
+              if (!titleText) return null;
+              return (
+                <div style={{
+                  color: '#fff',
+                  fontSize: 20,
+                  fontWeight: 800,
+                  textAlign: 'center',
+                  lineHeight: 1.15,
+                  textShadow: '0 8px 28px rgba(0,0,0,0.6)',
+                  overflow: 'hidden',
+                  display: '-webkit-box',
+                  WebkitLineClamp: 3 as any,
+                  WebkitBoxOrient: 'vertical' as any,
+                }}>
+                  {titleText}
+                </div>
+              );
+            })()}
+          </div>
+        </div>
+      ) : (
+        // If no image, fall back to simple title block
+        meta.title && (
+          <div style={{
+            padding: 12,
+            background: 'rgba(16,16,20,0.95)',
+            borderRadius: 8,
+            fontSize: 15,
+            fontWeight: 700,
+            color: '#fff',
+          }}>{meta.title}</div>
+        )
+      )}
+
+    </a>
+  );
+}
+
 function TweetCard({ meta, onHover }: { meta: Meta; onHover: (hovered: boolean) => void; }) {
   const [hovered, setHovered] = useState(false);
   const [expanded, setExpanded] = useState(false);
   const enter = () => { setHovered(true); onHover(true); };
   const leave = () => { setHovered(false); onHover(false); };
 
-  const text = meta.description || meta.title || '';
+  // Show title + description, or just description, or just title
+  const text = meta.title && meta.description 
+    ? `${meta.title}\n\n${meta.description}`
+    : meta.description || meta.title || '';
 
   return (
     <a
@@ -141,8 +261,8 @@ function TweetCard({ meta, onHover }: { meta: Meta; onHover: (hovered: boolean) 
         <div style={{ fontSize: 14, lineHeight: 1.65, color: '#e4e4e7' }}>
           <div style={
             expanded
-              ? {}
-              : { display: '-webkit-box', WebkitLineClamp: 6 as never, WebkitBoxOrient: 'vertical' as never, overflow: 'hidden' }
+              ? { whiteSpace: 'pre-wrap', wordBreak: 'break-word' }
+              : { display: '-webkit-box', WebkitLineClamp: 6 as never, WebkitBoxOrient: 'vertical' as never, overflow: 'hidden', whiteSpace: 'pre-wrap', wordBreak: 'break-word' }
           }>
             {text}
           </div>
@@ -166,7 +286,7 @@ function TweetCard({ meta, onHover }: { meta: Meta; onHover: (hovered: boolean) 
         </div>
       ) : null}
 
-      {/* Attached image — below text, rounded border */}
+      {/* Attached image — below text, rounded border with fade to void */}
       {meta.image ? (
         <div style={{
           width: '100%',
@@ -174,6 +294,7 @@ function TweetCard({ meta, onHover }: { meta: Meta; onHover: (hovered: boolean) 
           overflow: 'hidden',
           border: '1px solid rgba(255,255,255,0.07)',
           flexShrink: 0,
+          position: 'relative',
         }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -181,44 +302,18 @@ function TweetCard({ meta, onHover }: { meta: Meta; onHover: (hovered: boolean) 
             alt={meta.title || ''}
             style={{ width: '100%', height: 168, objectFit: 'cover', display: 'block' }}
           />
+          {/* Fade overlay */}
+          <div style={{
+            position: 'absolute',
+            bottom: 0,
+            left: 0,
+            right: 0,
+            height: '60%',
+            background: 'linear-gradient(to bottom, transparent, rgba(16, 16, 20, 0.95))',
+            pointerEvents: 'none',
+          }} />
         </div>
       ) : null}
-
-      {/* Footer — engagement row */}
-      <div style={{
-        display: 'flex',
-        alignItems: 'center',
-        gap: 16,
-        marginTop: 2,
-        color: '#71717a',
-        fontSize: 13,
-      }}>
-        {/* Reply */}
-        <span style={{ display: 'inline-flex', alignItems: 'center', gap: 5 }}>
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-          </svg>
-        </span>
-        {/* Repost */}
-        <span style={{ display: 'inline-flex', alignItems: 'center', gap: 5 }}>
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-            <polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/>
-          </svg>
-        </span>
-        {/* Like */}
-        <span style={{ display: 'inline-flex', alignItems: 'center', gap: 5 }}>
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-          </svg>
-          {meta.likes ? meta.likes : ''}
-        </span>
-        {/* Bookmark */}
-        <span style={{ marginLeft: 'auto', display: 'inline-flex', alignItems: 'center', gap: 5 }}>
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
-          </svg>
-        </span>
-      </div>
     </a>
   );
 }
@@ -226,11 +321,13 @@ function TweetCard({ meta, onHover }: { meta: Meta; onHover: (hovered: boolean) 
 export default function Web3Community() {
   const [posts, setPosts] = useState<Post[]>(() => POSTS.map((u, i) => ({ id: String(i), url: u })));
   const [paused, setPaused] = useState(false);
+  const [activeTab, setActiveTab] = useState<'posts' | 'articles'>('posts');
 
   const [metaList, setMetaList] = useState<Meta[] | null>(null);
+  const [articlesList, setArticlesList] = useState<Meta[] | null>(null);
 
   useEffect(() => {
-    // Fetch scraped metadata for provided post URLs
+    // Fetch scraped metadata for posts
     let cancelled = false;
     (async () => {
       try {
@@ -248,6 +345,30 @@ export default function Web3Community() {
         }
       } catch (err) {
         setMetaList(POSTS.map(u => ({ url: u, title: '', description: '', image: '' })));
+      }
+    })();
+    return () => { cancelled = true; };
+  }, []);
+
+  useEffect(() => {
+    // Fetch scraped metadata for articles
+    let cancelled = false;
+    (async () => {
+      try {
+        const res = await fetch('/api/fetch-meta', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ urls: ARTICLES }),
+        });
+        const data = await res.json();
+        if (cancelled) return;
+        if (data?.ok && Array.isArray(data.results)) {
+          setArticlesList(data.results.map((r: any) => ({ url: r.url, title: r.title || '', description: r.description || '', image: r.image || '', likes: r.likes || 0 })));
+        } else {
+          setArticlesList(ARTICLES.map(u => ({ url: u, title: '', description: '', image: '', likes: 0 })));
+        }
+      } catch (err) {
+        setArticlesList(ARTICLES.map(u => ({ url: u, title: '', description: '', image: '' })));
       }
     })();
     return () => { cancelled = true; };
@@ -329,63 +450,133 @@ export default function Web3Community() {
             Follow @_devTimmy
           </a>
         </div>
-      </div>
 
-      {/* ── Marquee ───────────────────────────────────────────────────── */}
-      {/* Full-bleed so cards can scroll past both edges */}
-      <div
-        className="tweets-marquee-outer"
-        aria-label="X posts auto-scroll"
-        style={{ paddingLeft: 24 }}
-      >
-        <div
-          className="tweets-marquee-track"
-          style={{
-            animationPlayState: paused ? "paused" : "running",
-          }}
-        >
-          {metaList === null ? (
-            // Show skeletons while loading
-            Array.from({ length: POSTS.length * 2 }).map((_, i) => (
-              <div key={`s-${i}`} style={{ width: 320, flexShrink: 0, borderRadius: 12, padding: 12 }}>
-                <div style={{ width: '100%', height: 160, borderRadius: 8, background: 'linear-gradient(90deg, #0d0d0d, #151515, #0d0d0d)', backgroundSize: '200% 100%', animation: 'shimmer 1.2s linear infinite' }} />
-                <div style={{ height: 12 }} />
-                <div style={{ width: '70%', height: 12, borderRadius: 6, background: 'linear-gradient(90deg, #0d0d0d, #151515, #0d0d0d)', backgroundSize: '200% 100%', animation: 'shimmer 1.2s linear infinite' }} />
-                <div style={{ height: 8 }} />
-                <div style={{ width: '100%', height: 44, borderRadius: 6, background: 'linear-gradient(90deg, #0d0d0d, #151515, #0d0d0d)', backgroundSize: '200% 100%', animation: 'shimmer 1.2s linear infinite' }} />
-              </div>
-            ))
-          ) : (
-            looped.map((meta, i) => (
-              <TweetCard
-                key={`${meta.url}-${i}`}
-                meta={meta as any}
-                onHover={handleCardHover}
-              />
-            ))
-          )}
+        {/* ── Tabs ───────────────────────────────────────────────────── */}
+        <div style={{
+          display: "flex",
+          gap: 16,
+          marginBottom: 32,
+          borderBottom: "1px solid rgba(255,255,255,0.1)",
+          paddingBottom: 16,
+        }}>
+          {(['posts', 'articles'] as const).map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              style={{
+                background: 'none',
+                border: 'none',
+                padding: '8px 16px',
+                fontSize: 14,
+                fontWeight: 600,
+                color: activeTab === tab ? '#ffffff' : '#71717a',
+                cursor: 'pointer',
+                transition: 'color 150ms ease',
+                borderBottom: activeTab === tab ? '2px solid #8b5cf6' : 'none',
+                marginBottom: -16,
+                paddingBottom: 16,
+              }}
+              onMouseEnter={(e) => {
+                if (activeTab !== tab) {
+                  (e.currentTarget as HTMLButtonElement).style.color = '#a1a1aa';
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (activeTab !== tab) {
+                  (e.currentTarget as HTMLButtonElement).style.color = '#71717a';
+                }
+              }}
+            >
+              {tab === 'posts' ? 'What I Share' : 'Articles'}
+            </button>
+          ))}
         </div>
       </div>
 
-      {/* ── See all CTA ───────────────────────────────────────────────── */}
-      <div style={{ maxWidth: 1200, margin: "32px auto 0", padding: "0 24px" }}>
-        <a
-          href="https://x.com/_devTimmy"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            display: "inline-flex", alignItems: "center", gap: 6,
-            fontSize: 13, fontWeight: 700, color: "#8b5cf6",
-            textDecoration: "none",
-            transition: "color 150ms ease",
-          }}
-          onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.color = "#a78bfa"; }}
-          onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.color = "#8b5cf6"; }}
-        >
-          See all posts on X
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><polyline points="9 18 15 12 9 6"/></svg>
-        </a>
-      </div>
+      {/* ── Marquee (Posts Tab) ───────────────────────────────────────────────────── */}
+      {activeTab === 'posts' && (
+        <>
+          <div
+            className="tweets-marquee-outer"
+            aria-label="X posts auto-scroll"
+            style={{ paddingLeft: 24 }}
+          >
+            <div
+              className="tweets-marquee-track"
+              style={{
+                animationPlayState: paused ? "paused" : "running",
+              }}
+            >
+              {metaList === null ? (
+                // Show skeletons while loading
+                Array.from({ length: POSTS.length * 2 }).map((_, i) => (
+                  <div key={`s-${i}`} style={{ width: 320, flexShrink: 0, borderRadius: 12, padding: 12 }}>
+                    <div style={{ width: '100%', height: 160, borderRadius: 8, background: 'linear-gradient(90deg, #0d0d0d, #151515, #0d0d0d)', backgroundSize: '200% 100%', animation: 'shimmer 1.2s linear infinite' }} />
+                    <div style={{ height: 12 }} />
+                    <div style={{ width: '70%', height: 12, borderRadius: 6, background: 'linear-gradient(90deg, #0d0d0d, #151515, #0d0d0d)', backgroundSize: '200% 100%', animation: 'shimmer 1.2s linear infinite' }} />
+                    <div style={{ height: 8 }} />
+                    <div style={{ width: '100%', height: 44, borderRadius: 6, background: 'linear-gradient(90deg, #0d0d0d, #151515, #0d0d0d)', backgroundSize: '200% 100%', animation: 'shimmer 1.2s linear infinite' }} />
+                  </div>
+                ))
+              ) : (
+                looped.map((meta, i) => (
+                  <TweetCard
+                    key={`${meta.url}-${i}`}
+                    meta={meta as any}
+                    onHover={handleCardHover}
+                  />
+                ))
+              )}
+            </div>
+          </div>
+
+          {/* ── See all CTA ───────────────────────────────────────────────── */}
+          <div style={{ maxWidth: 1200, margin: "32px auto 0", padding: "0 24px" }}>
+            <a
+              href="https://x.com/_devTimmy"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: "inline-flex", alignItems: "center", gap: 6,
+                fontSize: 13, fontWeight: 700, color: "#8b5cf6",
+                textDecoration: "none",
+                transition: "color 150ms ease",
+              }}
+              onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.color = "#a78bfa"; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.color = "#8b5cf6"; }}
+            >
+              See all posts on X
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+          </div>
+        </>
+      )}
+
+      {/* ── Articles Tab ───────────────────────────────────────────────────── */}
+      {activeTab === 'articles' && (
+        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 24px" }}>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+            gap: 20,
+          }}>
+            {articlesList ? articlesList.map((meta, i) => (
+              <ArticleCard
+                key={`article-${meta.url}-${i}`}
+                meta={meta as any}
+              />
+            )) : (
+              Array.from({ length: 3 }).map((_, i) => (
+                <div key={`article-skeleton-${i}`} style={{ borderRadius: 12, padding: 12 }}>
+                  <div style={{ width: '100%', height: 200, borderRadius: 8, background: 'linear-gradient(90deg, #0d0d0d, #151515, #0d0d0d)', backgroundSize: '200% 100%', animation: 'shimmer 1.2s linear infinite' }} />
+                  <div style={{ height: 12 }} />
+                  <div style={{ width: '100%', height: 80, borderRadius: 6, background: 'linear-gradient(90deg, #0d0d0d, #151515, #0d0d0d)', backgroundSize: '200% 100%', animation: 'shimmer 1.2s linear infinite' }} />
+                </div>
+              ))
+            )}
+          </div>
+        </div>
+      )}
 
       <style>{`
         .tweets-marquee-outer {

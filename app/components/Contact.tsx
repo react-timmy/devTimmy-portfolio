@@ -5,7 +5,7 @@ import { useState } from "react";
 const SOCIAL = [
   { label: "X / Twitter", handle: "@_devTimmy",           href: "https://x.com/_devTimmy",          color: "#ffffff" },
   { label: "GitHub",       handle: "@react-timmy",          href: "https://github.com/react-timmy",   color: "#a1a1aa" },
-  { label: "Email",        handle: "cs...@gmail.com", href: "mailto:colesustain00@gmail.com", color: "#8b5cf6" },
+  { label: "Email",        handle: "cs@gmail.com", href: "mailto:colesustain00@gmail.com", color: "#8b5cf6" },
 ];
 
 const PROJECT_TYPES = ["Web App", "Mobile App", "AI Integration", "Client Website", "Consulting / Review", "Collab / Open Source", "Other"];
@@ -286,9 +286,9 @@ export default function Contact() {
                   {/* Social links row — 3 cols inside the form card */}
                   <div style={{
                     display: "grid",
-                    gridTemplateColumns: "repeat(3, 1fr)",
-                    gap: 10,
-                    paddingTop: 16,
+                    gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+                    gap: "10px",
+                    paddingTop: "16px",
                     borderTop: "1px solid rgba(255,255,255,0.06)",
                   }}>
                     {SOCIAL.map(({ label, handle, href, color }) => {
@@ -310,6 +310,8 @@ export default function Contact() {
                             borderRadius: 10,
                             textDecoration: "none",
                             transition: "border-color 150ms ease, background 150ms ease",
+                            width: "100%",
+                            boxSizing: "border-box",
                           }}
                           onMouseEnter={e => {
                             const el = e.currentTarget as HTMLAnchorElement;

@@ -178,6 +178,10 @@
   }
 }
 
+.collapse {
+  visibility: collapse;
+}
+
 .visible {
   visibility: visible;
 }
@@ -252,10 +256,6 @@
 
 .transform {
   transform: var(--tw-rotate-x, ) var(--tw-rotate-y, ) var(--tw-rotate-z, ) var(--tw-skew-x, ) var(--tw-skew-y, );
-}
-
-.cursor-pointer {
-  cursor: pointer;
 }
 
 .resize {
@@ -984,6 +984,12 @@ select.input {
   gap: 10px;
   margin-top: 4px;
   display: flex;
+}
+
+.contact-layout .card input, .contact-layout .card textarea, .contact-layout .card select {
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
 }
 
 @media (min-width: 1024px) {

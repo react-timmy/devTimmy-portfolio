@@ -50,7 +50,7 @@ export const projects: Project[] = [
     subtitle:      "Full-stack web project for builders",
     summary:
       "Full-stack platform for tracking projects and connecting with builders. React, Node.js, deployed on Railway.",
-    category:      "projects hub",
+    category:      "web",
     status:        "published",
     featured:      true,
     priority:      3,
