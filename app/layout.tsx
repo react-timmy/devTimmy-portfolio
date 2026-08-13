@@ -88,6 +88,44 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full`}
     >
+      <head>
+        <meta name="google-site-verification" content="Z1dN3MwWGovirMrzNwY60G3ZTP6hdfBlDL5zIdtyeXs" />
+        <meta name="description" content="Full-stack AI developer building practical web and mobile products from concept to production. Timmy (devTimmy) — React, Next.js, React Native, TypeScript, AI integrations." />
+        <meta name="keywords" content="Timmy, dev timmy, devTimmy, full-stack developer, AI developer, Next.js, React Native, TypeScript, portfolio" />
+        <meta name="author" content="Timmy" />
+        <link rel="canonical" href={BASE_URL} />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Timmy | Full Stack Dev, Mobile Developer, Writer" />
+        <meta property="og:description" content="Full-stack AI developer building practical web and mobile products from concept to production." />
+        <meta property="og:url" content={BASE_URL} />
+        <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="@_devTimmy" />
+
+        {/* Structured Data (Person) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Timmy",
+              alternateName: ["dev timmy", "devTimmy", "Timmy"],
+              url: BASE_URL,
+              jobTitle: "Full-stack AI Developer",
+              sameAs: [
+                "https://x.com/_devTimmy",
+                "https://github.com/devtimmy",
+                "https://www.linkedin.com/in/devtimmy"
+              ]
+            }),
+          }}
+        />
+      </head>
       <body className="flex min-h-screen flex-col bg-[#000000] text-[#ffffff] antialiased">
         <Navbar />
         <main className="flex-1">{children}</main>
