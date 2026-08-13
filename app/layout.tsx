@@ -24,7 +24,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "Timmy — AI Web & Mobile Developer",
+    default: "Timmy | Full Stack Dev, Mobile Developer,  Writer",
     template: "%s | Timmy",
   },
   description:
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: BASE_URL,
-    title: "Timmy — AI Web & Mobile Developer",
+    title: "Timmy | AI Web & Mobile Developer, Writer",
     description:
       "Full-stack AI developer building practical web and mobile products from concept to production.",
     siteName: "Timmy Portfolio",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
         url: `${BASE_URL}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: "Timmy — AI Web & Mobile Developer",
+        alt: "Timmy | AI Web & Mobile Developer",
       },
     ],
   },
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@_devTimmy",
     creator: "@_devTimmy",
-    title: "Timmy — AI Web & Mobile Developer",
+    title: "Timmy | AI Web & Mobile Developer",
     description:
       "Full-stack AI developer building practical web and mobile products from concept to production.",
     images: [`${BASE_URL}/og-image.png`],
