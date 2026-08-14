@@ -1,6 +1,5 @@
 "use client";
 
-const AVATAR = "https://pbs.twimg.com/profile_images/1990929564474773504/HkT4wInV_400x400.jpg";
 
 
 function XLogo({ size = 16 }: { size?: number }) {
@@ -23,44 +22,6 @@ export default function About() {
     >
       <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 20px" }}>
 
-        {/* Avatar + name row */}
-        <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 32 }}>
-          <div style={{ position: "relative", flexShrink: 0 }}>
-            <img
-              src={AVATAR}
-              alt="Timmy"
-              style={{
-                width: 56,
-                height: 56,
-                borderRadius: "50%",
-                objectFit: "cover",
-                border: "2px solid transparent",
-                display: "block",
-              }}
-            />
-            <span
-              style={{
-                position: "absolute",
-                bottom: 4,
-                right: 4,
-                width: 11,
-                height: 11,
-                borderRadius: "50%",
-                background: "#4ade80",
-                border: "2px solid #000",
-              }}
-            />
-          </div>
-          <div>
-            <p style={{ fontSize: 16, fontWeight: 800, color: "#ffffff", letterSpacing: -0.3 }}>
-              Timmy
-            </p>
-            <p style={{ fontSize: 12, color: "#52525b", marginTop: 0, fontWeight: 600 }}>
-              always works {"->"} build in private, ship in public.
-            </p>
-          </div>
-        </div>
-
         {/* Bio */}
         <h2
           style={{
@@ -72,7 +33,7 @@ export default function About() {
             marginBottom: 20,
           }}
         >
-          Builder. Shipper.
+          About Me
         </h2>
 
         <p style={{ fontSize: 16, lineHeight: 1.8, color: "#a1a1aa", marginBottom: 16 }}>
@@ -94,6 +55,10 @@ export default function About() {
         <p style={{ fontSize: 16, lineHeight: 1.8, color: "#a1a1aa" }}>
         It's not work if i have fun building it.
         </p>
+
+        <blockquote style={{ marginTop: 20, fontStyle: 'italic', color: '#a1a1aa', borderLeft: '3px solid rgba(229,9,20,0.2)', paddingLeft: 12 }}>
+          always works → build in private, ship in public.
+        </blockquote>
 
       </div>
     </section>
