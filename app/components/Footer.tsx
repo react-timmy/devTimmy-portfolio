@@ -1,7 +1,5 @@
 "use client";
 
-const AVATAR = "https://pbs.twimg.com/profile_images/1990929564474773504/HkT4wInV_400x400.jpg";
-
 const NAV_COLS = [
   {
     heading: "Site",
@@ -53,28 +51,8 @@ export default function Footer() {
 
           {/* Brand col — span 2 */}
           <div className="col-span-2">
-            {/* Profile image logo */}
-            <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
-              <div style={{ position: "relative", flexShrink: 0 }}>
-                <img
-                  src={AVATAR} alt="Timmy"
-                  style={{
-                    width: 44, height: 44, borderRadius: "50%",
-                    objectFit: "cover",
-                    border: "2px solid transparent",
-                    display: "block",
-                  }}
-                />
-                <span style={{
-                  position: "absolute", bottom: 1, right: 1,
-                  width: 10, height: 10, borderRadius: "50%",
-                  background: "#4ade80", border: "2px solid #000",
-                }} />
-              </div>
-              <div>
-                <p style={{ fontSize: 15, fontWeight: 900, color: "#ffffff", letterSpacing: -0.5 }}>Timmy</p>
-                <p style={{ fontSize: 11, color: "#52525b", fontWeight: 700, marginTop: 1 }}>@_devTimmy</p>
-              </div>
+            <div style={{ marginBottom: 16 }}>
+              <p style={{ fontSize: 35, fontWeight: 900, color: "#ffffff", letterSpacing: -0.5 }}>Timmy</p>
             </div>
 
             <p style={{ fontSize: 13, lineHeight: 1.7, color: "#3f3f46", maxWidth: 300, marginBottom: 20 }}>
@@ -155,7 +133,7 @@ export default function Footer() {
           alignItems: "center", justifyContent: "space-between", gap: 8,
         }}>
           <p style={{ fontSize: 12, fontWeight: 700, color: "#1c1c1e" }}>
-            © {new Date().getFullYear()} Timmy · @_devTimmy — All rights reserved.
+            © {new Date().getFullYear()} Timmy · All rights reserved.
           </p>
           <p style={{ fontSize: 12, fontWeight: 700, color: "#1c1c1e" }}>
             Built with Next.js · Deployed on Vercel
