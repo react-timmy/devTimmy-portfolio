@@ -251,7 +251,7 @@ export default function Navbar() {
               }}>
                 <div style={{
                   transition: "transform 300ms cubic-bezier(.2,.9,.2,1)",
-                  transform: menuOpen ? "translateY(-100%)" : "translateY(0%)",
+                  transform: menuOpen ? "translateY(-50%)" : "translateY(0%)",
                   willChange: "transform",
                 }}>
                   <div style={{ height: 14, lineHeight: "14px" }}>@_devTimmy</div>
