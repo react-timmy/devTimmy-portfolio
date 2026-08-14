@@ -9,7 +9,6 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 "use client";
 ;
-const AVATAR = "https://pbs.twimg.com/profile_images/1990929564474773504/HkT4wInV_400x400.jpg";
 function XLogo({ size = 16 }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
         width: size,
@@ -20,12 +19,12 @@ function XLogo({ size = 16 }) {
             d: "M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"
         }, void 0, false, {
             fileName: "[project]/app/components/About.tsx",
-            lineNumber: 9,
+            lineNumber: 8,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/components/About.tsx",
-        lineNumber: 8,
+        lineNumber: 7,
         columnNumber: 5
     }, this);
 }
@@ -45,102 +44,6 @@ function About() {
                 padding: "0 20px"
             },
             children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    style: {
-                        display: "flex",
-                        alignItems: "center",
-                        gap: 16,
-                        marginBottom: 32
-                    },
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            style: {
-                                position: "relative",
-                                flexShrink: 0
-                            },
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                    src: AVATAR,
-                                    alt: "Timmy",
-                                    style: {
-                                        width: 56,
-                                        height: 56,
-                                        borderRadius: "50%",
-                                        objectFit: "cover",
-                                        border: "2px solid transparent",
-                                        display: "block"
-                                    }
-                                }, void 0, false, {
-                                    fileName: "[project]/app/components/About.tsx",
-                                    lineNumber: 29,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    style: {
-                                        position: "absolute",
-                                        bottom: 4,
-                                        right: 4,
-                                        width: 11,
-                                        height: 11,
-                                        borderRadius: "50%",
-                                        background: "#4ade80",
-                                        border: "2px solid #000"
-                                    }
-                                }, void 0, false, {
-                                    fileName: "[project]/app/components/About.tsx",
-                                    lineNumber: 41,
-                                    columnNumber: 13
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/app/components/About.tsx",
-                            lineNumber: 28,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    style: {
-                                        fontSize: 16,
-                                        fontWeight: 800,
-                                        color: "#ffffff",
-                                        letterSpacing: -0.3
-                                    },
-                                    children: "Timmy"
-                                }, void 0, false, {
-                                    fileName: "[project]/app/components/About.tsx",
-                                    lineNumber: 55,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    style: {
-                                        fontSize: 12,
-                                        color: "#52525b",
-                                        marginTop: 0,
-                                        fontWeight: 600
-                                    },
-                                    children: [
-                                        "always works ",
-                                        "->",
-                                        " build in private, ship in public."
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/app/components/About.tsx",
-                                    lineNumber: 58,
-                                    columnNumber: 13
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/app/components/About.tsx",
-                            lineNumber: 54,
-                            columnNumber: 11
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/app/components/About.tsx",
-                    lineNumber: 27,
-                    columnNumber: 9
-                }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                     style: {
                         color: "#ffffff",
@@ -150,10 +53,10 @@ function About() {
                         lineHeight: 1.3,
                         marginBottom: 20
                     },
-                    children: "Builder. Shipper."
+                    children: "About Me"
                 }, void 0, false, {
                     fileName: "[project]/app/components/About.tsx",
-                    lineNumber: 65,
+                    lineNumber: 26,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -173,7 +76,7 @@ function About() {
                             children: " web"
                         }, void 0, false, {
                             fileName: "[project]/app/components/About.tsx",
-                            lineNumber: 79,
+                            lineNumber: 40,
                             columnNumber: 19
                         }, this),
                         " and",
@@ -186,7 +89,7 @@ function About() {
                             children: "mobile"
                         }, void 0, false, {
                             fileName: "[project]/app/components/About.tsx",
-                            lineNumber: 80,
+                            lineNumber: 41,
                             columnNumber: 11
                         }, this),
                         " apps, write my thoughts on  ",
@@ -199,7 +102,7 @@ function About() {
                             children: "dev and web3"
                         }, void 0, false, {
                             fileName: "[project]/app/components/About.tsx",
-                            lineNumber: 81,
+                            lineNumber: 42,
                             columnNumber: 11
                         }, this),
                         " related topics on ",
@@ -207,14 +110,14 @@ function About() {
                             size: 14
                         }, void 0, false, {
                             fileName: "[project]/app/components/About.tsx",
-                            lineNumber: 81,
+                            lineNumber: 42,
                             columnNumber: 101
                         }, this),
                         ", and write contexts for AI Images. Full-stack by day, curious about everything else by night."
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/components/About.tsx",
-                    lineNumber: 78,
+                    lineNumber: 39,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -234,14 +137,14 @@ function About() {
                             children: "live, working product"
                         }, void 0, false, {
                             fileName: "[project]/app/components/About.tsx",
-                            lineNumber: 85,
+                            lineNumber: 46,
                             columnNumber: 46
                         }, this),
                         " – web, mobile, or AI-powered. Fast."
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/components/About.tsx",
-                    lineNumber: 84,
+                    lineNumber: 45,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -254,7 +157,7 @@ function About() {
                     children: "My stack is React, React Native, Node.js, TypeScript, and whatever AI API gets the job done. I work end-to-end – design unique UI's – and I move fast because my workflow is terminal-first / IDE and AI-assisted."
                 }, void 0, false, {
                     fileName: "[project]/app/components/About.tsx",
-                    lineNumber: 88,
+                    lineNumber: 49,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -266,18 +169,32 @@ function About() {
                     children: "It's not work if i have fun building it."
                 }, void 0, false, {
                     fileName: "[project]/app/components/About.tsx",
-                    lineNumber: 94,
+                    lineNumber: 55,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("blockquote", {
+                    style: {
+                        marginTop: 20,
+                        fontStyle: 'italic',
+                        color: '#a1a1aa',
+                        borderLeft: '3px solid rgba(180, 0, 235, 0.2)',
+                        paddingLeft: 12
+                    },
+                    children: "always works → build in private, ship in public."
+                }, void 0, false, {
+                    fileName: "[project]/app/components/About.tsx",
+                    lineNumber: 59,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/components/About.tsx",
-            lineNumber: 24,
+            lineNumber: 23,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/components/About.tsx",
-        lineNumber: 16,
+        lineNumber: 15,
         columnNumber: 5
     }, this);
 }
@@ -1559,10 +1476,10 @@ function FilmSortFeature() {
                 style: {
                     position: "absolute",
                     top: 0,
-                    left: "5%",
-                    width: "40%",
-                    height: "50%",
-                    background: "radial-gradient(ellipse at top left, rgba(229,9,20,0.07) 0%, transparent 70%)",
+                    left: 0,
+                    width: "60vw",
+                    height: "60%",
+                    background: "radial-gradient(ellipse at left center, rgba(229,9,20,0.08) 0%, transparent 70%)",
                     pointerEvents: "none"
                 }
             }, void 0, false, {

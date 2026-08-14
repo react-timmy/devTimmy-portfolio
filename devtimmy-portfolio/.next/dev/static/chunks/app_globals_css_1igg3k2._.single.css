@@ -181,6 +181,10 @@
   text-transform: uppercase;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .antialiased {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

@@ -56,7 +56,7 @@ export default function About() {
         It's not work if i have fun building it.
         </p>
 
-        <blockquote style={{ marginTop: 20, fontStyle: 'italic', color: '#a1a1aa', borderLeft: '3px solid rgba(229,9,20,0.2)', paddingLeft: 12 }}>
+        <blockquote style={{ marginTop: 20, fontStyle: 'italic', color: '#a1a1aa', borderLeft: '3px solid rgba(180, 0, 235, 0.2)', paddingLeft: 12 }}>
           always works → build in private, ship in public.
         </blockquote>
 
