@@ -51,11 +51,11 @@ export default function Footer() {
 
           {/* Brand col — span 2 */}
           <div className="col-span-2">
-            <div style={{ marginBottom: 16 }}>
+            <div style={{ marginBottom: 8 }}>
               <p style={{ fontSize: 35, fontWeight: 900, color: "#ffffff", letterSpacing: -0.5 }}>Timmy</p>
             </div>
 
-            <p style={{ fontSize: 13, lineHeight: 1.7, color: "#3f3f46", maxWidth: 300, marginBottom: 20 }}>
+            <p style={{ fontSize: 13, lineHeight: 1.7, color: "#3f3f46", maxWidth: 300, marginBottom: 8 }}>
               Full-stack AI developer building practical web and mobile products from concept to production.
             </p>
 
