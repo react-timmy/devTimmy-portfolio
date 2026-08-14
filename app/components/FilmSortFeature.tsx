@@ -41,10 +41,10 @@ export default function FilmSortFeature() {
         style={{
           position: "absolute",
           top: 0,
-          left: "5%",
-          width: "40%",
-          height: "50%",
-          background: "radial-gradient(ellipse at top left, rgba(229,9,20,0.07) 0%, transparent 70%)",
+          left: 0,
+          width: "60vw",
+          height: "60%",
+          background: "radial-gradient(ellipse at left center, rgba(229,9,20,0.08) 0%, transparent 70%)",
           pointerEvents: "none",
         }}
       />
