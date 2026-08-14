@@ -24,11 +24,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "Timmy | Full Stack Dev, Mobile Developer,  Writer",
+    default: "Timmy | AI-First Full-Stack Developer, Mobile Developer, Content Creator",
     template: "%s | Timmy",
   },
   description:
-    "Full-stack AI developer building practical web and mobile products from concept to production. React, Next.js, React Native, TypeScript, AI integrations.",
+    "I am an Full-Stack developer that builds practical web and mobile app ideas from concept to production. Prompt-to-Stack Builder, Mobile Developer, and Content Creator",
   keywords: [
     "full-stack developer",
     "AI developer",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     url: BASE_URL,
     title: "Timmy | AI Web & Mobile Developer, Writer",
     description:
-      "Full-stack AI developer building practical web and mobile products from concept to production.",
+      "I am an Full-Stack developer that builds practical web and mobile app ideas from concept to production. Prompt-to-Stack Builder, Mobile Developer, and Content Creator",
     siteName: "Timmy Portfolio",
     images: [
       {
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     creator: "@_devTimmy",
     title: "Timmy | AI Web & Mobile Developer",
     description:
-      "Full-stack AI developer building practical web and mobile products from concept to production.",
+      "I am an Full-Stack developer that builds practical web and mobile app ideas from concept to production. Prompt-to-Stack Builder, Mobile Developer, and Content Creator",
     images: [`${BASE_URL}/og-image.png`],
   },
   robots: {
@@ -90,7 +90,7 @@ export default function RootLayout({
     >
       <head>
         <meta name="google-site-verification" content="Z1dN3MwWGovirMrzNwY60G3ZTP6hdfBlDL5zIdtyeXs" />
-        <meta name="description" content="Full-stack AI developer building practical web and mobile products from concept to production. Timmy (devTimmy) — React, Next.js, React Native, TypeScript, AI integrations." />
+        <meta name="description" content="I am an Full-Stack developer that builds practical web and mobile app ideas from concept to production. Prompt-to-Stack Builder, Mobile Developer, and Content Creator" />
         <meta name="keywords" content="Timmy, dev timmy, devTimmy, full-stack developer, AI developer, Next.js, React Native, TypeScript, portfolio" />
         <meta name="author" content="Timmy" />
         <link rel="canonical" href={BASE_URL} />
