@@ -42,6 +42,11 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Timmy", url: "https://x.com/_devTimmy" }],
   creator: "Timmy",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
   openGraph: {
     type: "website",
     url: BASE_URL,
@@ -94,6 +99,7 @@ export default function RootLayout({
         <meta name="keywords" content="Timmy, dev timmy, devTimmy, full-stack developer, AI developer, Next.js, React Native, TypeScript, portfolio" />
         <meta name="author" content="Timmy" />
         <link rel="canonical" href={BASE_URL} />
+        <link rel="icon" href="/favicon.ico" />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
