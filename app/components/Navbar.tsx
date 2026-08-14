@@ -368,7 +368,7 @@ export default function Navbar() {
         pointerEvents: menuOpen ? "auto" : "none",
         transition: "opacity 250ms ease",
       }}>
-        <div style={{ height: NAV_H, flexShrink: 0 }} />
+        <div style={{ height: NAV_H + 16, flexShrink: 0 }} />
 
 
         <nav style={{ padding: "16px 16px 0", flex: 1, display: "flex", flexDirection: "column", gap: 2 }}>
