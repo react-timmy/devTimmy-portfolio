@@ -241,18 +241,23 @@ export default function Navbar() {
                 Timmy
               </span>
               {/* @handle fades in under name once avatar landed */}
-              <span style={{
-                fontSize: 10, fontWeight: 700,
-                color: "#52525b",
-                letterSpacing: 0.3,
+              <div style={{
+                fontSize: 10, fontWeight: 700, color: "#52525b", letterSpacing: 0.3,
                 display: "block",
-                maxHeight: landed ? "14px" : "0px",
-                opacity: landed ? 1 : 0,
                 overflow: "hidden",
+                maxHeight: (landed || menuOpen) ? "14px" : "0px",
+                opacity: (landed || menuOpen) ? 1 : 0,
                 transition: "opacity 220ms ease, max-height 220ms ease",
               }}>
-                @_devTimmy
-              </span>
+                <div style={{
+                  transition: "transform 300ms cubic-bezier(.2,.9,.2,1)",
+                  transform: menuOpen ? "translateY(-100%)" : "translateY(0%)",
+                  willChange: "transform",
+                }}>
+                  <div style={{ height: 14, lineHeight: "14px" }}>@_devTimmy</div>
+                  <div style={{ height: 14, lineHeight: "14px" }}>Full-stack AI Developer</div>
+                </div>
+              </div>
             </div>
           </a>
 
@@ -365,20 +370,6 @@ export default function Navbar() {
       }}>
         <div style={{ height: NAV_H, flexShrink: 0 }} />
 
-        <div style={{
-          padding: "24px 24px 20px",
-          display: "flex", alignItems: "center", gap: 12,
-          borderBottom: "1px solid rgba(255,255,255,0.06)",
-        }}>
-          <img
-            src={AVATAR} alt="Timmy"
-            style={{ width: 48, height: 48, borderRadius: "50%", objectFit: "cover", border: "2px solid rgba(139,92,246,0.4)" }}
-          />
-          <div>
-            <p style={{ fontSize: 16, fontWeight: 900, color: "#ffffff", letterSpacing: -0.4 }}>Timmy</p>
-            <p style={{ fontSize: 12, color: "#52525b", fontWeight: 700, marginTop: 2 }}>Full-stack AI Developer</p>
-          </div>
-        </div>
 
         <nav style={{ padding: "16px 16px 0", flex: 1, display: "flex", flexDirection: "column", gap: 2 }}>
           {NAV_LINKS.map(({ label, href }, i) => {
