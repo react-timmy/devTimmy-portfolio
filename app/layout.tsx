@@ -24,11 +24,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "Timmy | AI-First Full-Stack Developer, Mobile Developer, Content Creator",
+    default: "Timmy | Full Stack Dev, Mobile Developer,  Writer",
     template: "%s | Timmy",
   },
   description:
-    "I am an Full-Stack developer that builds practical web and mobile app ideas from concept to production. Prompt-to-Stack Builder , Mobile Developer, and Content Creator",
+    "Full-stack AI developer building practical web and mobile products from concept to production. React, Next.js, React Native, TypeScript, AI integrations.",
   keywords: [
     "full-stack developer",
     "AI developer",
@@ -42,17 +42,12 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Timmy", url: "https://x.com/_devTimmy" }],
   creator: "Timmy",
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-  },
   openGraph: {
     type: "website",
     url: BASE_URL,
     title: "Timmy | AI Web & Mobile Developer, Writer",
     description:
-      "I am an Full-Stack developer that builds practical web and mobile app ideas from concept to production. Prompt-to-Stack Builder , Mobile Developer, and Content Creator",
+      "Full-stack AI developer building practical web and mobile products from concept to production.",
     siteName: "Timmy Portfolio",
     images: [
       {
@@ -69,7 +64,7 @@ export const metadata: Metadata = {
     creator: "@_devTimmy",
     title: "Timmy | AI Web & Mobile Developer",
     description:
-      "I am an Full-Stack developer that builds practical web and mobile app ideas from concept to production. Prompt-to-Stack Builder , Mobile Developer, and Content Creator",
+      "Full-stack AI developer building practical web and mobile products from concept to production.",
     images: [`${BASE_URL}/og-image.png`],
   },
   robots: {
@@ -95,24 +90,21 @@ export default function RootLayout({
     >
       <head>
         <meta name="google-site-verification" content="Z1dN3MwWGovirMrzNwY60G3ZTP6hdfBlDL5zIdtyeXs" />
-        <meta name="description" content="I am an Full-Stack developer that builds practical web and mobile app ideas from concept to production. Prompt-to-Stack Builder , Mobile Developer, and Content Creator" />
+        <meta name="description" content="Full-stack AI developer building practical web and mobile products from concept to production. Timmy (devTimmy) — React, Next.js, React Native, TypeScript, AI integrations." />
         <meta name="keywords" content="Timmy, dev timmy, devTimmy, full-stack developer, AI developer, Next.js, React Native, TypeScript, portfolio" />
         <meta name="author" content="Timmy" />
         <link rel="canonical" href={BASE_URL} />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Timmy | Full Stack Developer, Mobile Developer, Content Creator" />
-        <meta property="og:description" content="I am an Full-Stack developer that builds practical web and mobile app ideas from concept to production. Prompt-to-Stack Builder , Mobile Developer, and Content Creator" />
+        <meta property="og:title" content="Timmy | Full Stack Dev, Mobile Developer, Writer" />
+        <meta property="og:description" content="Full-stack AI developer building practical web and mobile products from concept to production." />
         <meta property="og:url" content={BASE_URL} />
         <meta property="og:image" content={`${BASE_URL}/og-image.png`} />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="@_devTimmy" />
-        <meta name="twitter:description" content="I am an Full-Stack developer that builds practical web and mobile app ideas from concept to production. Prompt-to-Stack Builder , Mobile Developer, and Content Creator" />
 
         {/* Structured Data (Person) */}
         <script
